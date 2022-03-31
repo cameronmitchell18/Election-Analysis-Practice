@@ -1,3 +1,5 @@
-print("Hello World")
+x = 0 
 
-print("Testing this for VS Code Git Commit")
+while x <= 5:
+ print(x)
+ x = x + 1
