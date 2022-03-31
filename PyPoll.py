@@ -17,6 +17,9 @@ file_to_save = os.path.join('election_analysis' , 'analysis.txt')
 # Initalizing a total votes variable to zero 
 total_votes = 0 
 
+# Initializing a canadites name list 
+candidate_options = []
+
 # Open the election results and read the file 
 with open(file_to_load) as election_data: 
 
@@ -30,6 +33,11 @@ with open(file_to_load) as election_data:
     # Print each row in the csv file 
     for row in file_reader:
         # Adding to the total count 
-        total_votes += 1 
+        total_votes += 1
+        # Getting the candidate from the second index
+        candidate_name = row[2]
 
-print(total_votes)
+        # Adding the candidate name to the empty candidate list
+        candidate_options.append(candidate_name) 
+
+print(total_votes , candidate_options)
