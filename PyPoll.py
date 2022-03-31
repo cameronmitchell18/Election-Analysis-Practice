@@ -37,7 +37,9 @@ with open(file_to_load) as election_data:
         # Getting the candidate from the second index
         candidate_name = row[2]
 
-        # Adding the candidate name to the empty candidate list
-        candidate_options.append(candidate_name) 
+        # If the candidate does not match any existing candidate
+        if candidate_name not in candidate_options:
+            #Add it to the list of candidates
+            candidate_options.append(candidate_name)
 
 print(total_votes , candidate_options)
