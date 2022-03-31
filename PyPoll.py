@@ -20,6 +20,9 @@ total_votes = 0
 # Initializing a canadites name list 
 candidate_options = []
 
+# Creating an empty dictionary to count the votes of each candidate
+candidate_votes = {}
+
 # Open the election results and read the file 
 with open(file_to_load) as election_data: 
 
@@ -42,4 +45,7 @@ with open(file_to_load) as election_data:
             #Add it to the list of candidates
             candidate_options.append(candidate_name)
 
-print(total_votes , candidate_options)
+            # Begin Tracking the Candidate's vote count
+            candidate_votes[candidate_name] = 0 
+
+print(candidate_votes)
